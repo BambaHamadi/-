@@ -175,3 +175,25 @@ render();
 <script>document.getElementById('fab').href='https://wa.me/'+wa();</script>
 <script>(function(){var c=document.getElementById('rain'),x=c.getContext('2d'),w,h,d=[],rm=matchMedia('(prefers-reduced-motion:reduce)').matches;function s(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight}s();addEventListener('resize',s);for(var i=0;i<90;i++)d.push({x:Math.random()*w,y:Math.random()*h,l:10+Math.random()*16,v:6+Math.random()*7});function f(){x.clearRect(0,0,w,h);x.strokeStyle='rgba(255,255,255,.55)';x.lineWidth=1.2;x.beginPath();d.forEach(function(p){x.moveTo(p.x,p.y);x.lineTo(p.x-2,p.y+p.l);p.y+=p.v;if(p.y>h){p.y=-20;p.x=Math.random()*w}});x.stroke();if(!rm)requestAnimationFrame(f)}f()})();</script>
 </body></html>
+document.documentElement.dir
+<select id="langSel" onchange="changeLang(this.value)" style="padding:6px 10px;border-radius:20px;border:1px solid #dbe7d6;background:var(--card);color:var(--ink);font-family:Tajawal;">
+  <option value="ar">العربية</option>
+  <option value="fr">Français</option>
+  <option value="en">English</option>
+</select>
+
+<script>
+function changeLang(lang) {
+  if(lang === 'ar') {
+    document.documentElement.dir = 'rtl';
+    document.documentElement.lang = 'ar';
+    // هنا يمكنك إضافة ترجمات العناصر
+  } else if(lang === 'fr') {
+    document.documentElement.dir = 'ltr';
+    document.documentElement.lang = 'fr';
+  } else {
+    document.documentElement.dir = 'ltr';
+    document.documentElement.lang = 'en';
+  }
+}
+</script>
