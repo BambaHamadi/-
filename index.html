@@ -1,140 +1,63 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="light" style="color-scheme: light;">
-<head>
+<html lang="ar" dir="rtl" data-theme="light" style="color-scheme: light;"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>معشبة مجتمع الناجحين – نواكشوط</title>
-<link href="https://googleapis.com" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&amp;family=Reem+Kufi:wght@600;700&amp;display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f8ef;--ink:#17301f;--card:#fff;--mut:#5a6e60;--g:#2c7a49;--g2:#14422b;--gold:#f2b84b;--line:#dbe7d6;--hd:rgba(255,255,255,.92);box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a12;--ink:#eaf3e6;--card:#16271c;--mut:#a3b3a6;--line:#264131;--hd:rgba(14,26,18,.92)}}
+:root{--bg:#f4f8ef;--ink:#17301f;--card:#fff;--mut:#5a6e60;--g:#2c7a49;--g2:#14422b;--gold:#f2b84b;--line:#dbe7d6;--hd:rgba(255,255,255,.86);box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a12;--ink:#eaf3e6;--card:#16271c;--mut:#a3b3a6;--line:#264131;--hd:rgba(14,26,18,.88)}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,Tahoma,sans-serif;line-height:1.75}
-button,.btn{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:10px 20px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:transform .15s}
-button:active,.btn:active{transform:scale(.97)}
+button,.btn{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:12px 24px;font-weight:800;text-decoration:none;display:inline-block}
 button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-
-/* الشريط العلوي والشعار */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;display:flex;align-items:center;gap:8px;padding:9px 14px;background:var(--hd);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px;flex:1;color:var(--g2);text-decoration:none;min-width:180px}
-.logo img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);background:#fff;flex-shrink:0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;display:flex;align-items:center;gap:8px;padding:9px 14px;background:var(--hd);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:8px;flex:1;color:var(--g2);text-decoration:none;min-width:0}
 .logo b{font-family:'Reem Kufi',serif;font-size:1.12rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(prefers-color-scheme:dark){.logo{color:#bfe3c6}}
-
-.lang-sel{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-family:inherit;font-weight:700;font-size:.85rem;cursor:pointer}
-.cartb{background:var(--g);color:#fff;padding:8px 16px;font-size:.9rem}
-.ghost{background:transparent;border:1px solid var(--line);color:var(--ink);padding:7px 12px;font-size:.85rem}
+.cartb{background:var(--g);color:#fff;padding:9px 16px}
+.ghost{background:transparent;border:1px solid var(--line);color:var(--mut);padding:6px 12px;font-size:.85rem}
 .red{background:var(--g);color:#fff}.wa{background:#25d366;color:#06361a}
-
-/* الواجهة الرئيسية */
-.hero{position:relative;overflow:hidden;min-height:calc(85svh - 62px);background:linear-gradient(180deg,#26524d 0%,#4f8c7a 38%,#9fcfb4 62%,#d5ebc9 100%);color:#fff;display:flex;align-items:center}
+.hero{position:relative;overflow:hidden;min-height:calc(100svh - 62px);background:linear-gradient(180deg,#26524d 0%,#4f8c7a 38%,#9fcfb4 62%,#d5ebc9 100%);color:#fff}
 .sun{position:absolute;top:-12%;left:-15%;width:75vmax;height:75vmax;background:radial-gradient(circle,rgba(255,238,180,.6),rgba(255,238,180,0) 62%)}
 .cloud{position:absolute;top:5%;left:-10%;width:70%;height:110px;border-radius:50%;background:rgba(255,255,255,.2);filter:blur(24px);animation:drift 38s ease-in-out infinite alternate}
 .cloud.c2{top:16%;left:35%;width:60%;animation-duration:50s}
 @keyframes drift{to{transform:translateX(18%)}}
-.hc{position:relative;z-index:3;max-width:680px;margin:auto;padding:48px 22px;text-align:center;text-shadow:0 2px 14px rgba(8,40,30,.45)}
+.hills{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:44%;z-index:1}
+#rain{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.pt{position:absolute;top:-20px;left:var(--x);width:12px;height:16px;background:#ffc3d6;border-radius:85% 0 85% 0;z-index:2;opacity:.9;animation:fall var(--d) linear var(--s) infinite}
+@keyframes fall{0%{transform:translate(0,0) rotate(0)}50%{transform:translate(40px,55vh) rotate(180deg)}100%{transform:translate(-20px,105vh) rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.pt,.cloud{animation:none}}
+.hc{position:relative;z-index:3;max-width:680px;margin:auto;padding:56px 22px 0;text-align:center;text-shadow:0 2px 14px rgba(8,40,30,.45)}
 .tag{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:4px 16px;font-weight:700;margin-bottom:14px;backdrop-filter:blur(6px)}
-.hc h1{font-family:'Reem Kufi',serif;font-size:clamp(2.2rem,8vw,4rem);line-height:1.2;margin:0 0 12px}
-.hc p{font-size:1.1rem;margin:0 auto 22px;max-width:38ch}
+.hc h1{font-family:'Reem Kufi',serif;font-size:clamp(2.6rem,10vw,4.6rem);line-height:1.2;margin:0 0 10px}
+.hc p{font-size:1.15rem;margin:0 auto 22px;max-width:34ch}
 .hc .btn{margin:4px;text-shadow:none}.hc .red{background:var(--gold);color:#3a2800}
-
-/* الشريط المتحرك للمنتجات (Marquee) */
-.marquee-wrap{background:var(--g2);color:#fff;padding:12px 0;overflow:hidden;border-bottom:3px solid var(--gold);position:relative;direction:ltr}
-.marquee-track{display:flex;width:max-content;animation:scrollMarquee 28s linear infinite;gap:18px;padding:0 10px}
-.marquee-wrap:hover .marquee-track{animation-play-state:paused}
-.m-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;white-space:nowrap;cursor:pointer;transition:background .2s}
-.m-item:hover{background:rgba(255,255,255,.25)}
-.m-item img{width:34px;height:34px;border-radius:50%;object-fit:cover;background:#fff;border:1.5px solid var(--gold)}
-.m-item span{font-weight:700;font-size:.9rem}
-.m-item b{color:var(--gold);font-size:.85rem}
-@keyframes scrollMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* الأقسام والمنتجات */
 section{padding:36px 16px;max-width:1100px;margin:auto}
-h2{font-family:'Reem Kufi',serif;font-size:1.85rem;margin:0 0 10px;color:var(--g2);display:flex;align-items:center;gap:14px}
+h2{font-family:'Reem Kufi',serif;font-size:2rem;margin:0 0 10px;color:var(--g2);display:flex;align-items:center;gap:14px}
 @media(prefers-color-scheme:dark){h2{color:#bfe3c6}}
 h2:after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 10px,transparent 10px 18px)}
 .lead{color:var(--mut);margin:0 0 18px;max-width:60ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:10px;display:flex;flex-direction:column;box-shadow:0 10px 24px rgba(20,66,43,.08);position:relative}
-.tile{height:165px;border-radius:110px 110px 18px 18px;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 30%,#fff 0,#e3f1df 80%);overflow:hidden}
-.tile img{width:100%;height:100%;object-fit:cover}
-.card h3{font-size:1rem;margin:10px 4px 6px;text-align:center;flex:1}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin-bottom:10px}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--ink);white-space:nowrap;padding:9px 18px}
+.chip.on{background:var(--g);color:#fff;border-color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:10px;display:flex;flex-direction:column;box-shadow:0 10px 24px rgba(20,66,43,.09)}
+.tile{height:170px;border-radius:120px 120px 18px 18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c),#14422b)}
+.tile.ph{background:radial-gradient(ellipse at 50% 30%,#fff 0,#e3f1df 80%)}
+.tile img{max-height:140px;max-width:80%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.22))}
+.tile i{width:46px;height:70px;border-radius:12px 12px 8px 8px;background:#fff;position:relative}
+.tile i:before{content:"";position:absolute;top:-9px;left:10px;width:26px;height:11px;background:#fff;border-radius:4px}
+.tile i:after{content:"";position:absolute;top:24px;left:8px;width:30px;height:26px;border-radius:50%;background:#e57a9a}
+.card h3{font-size:.98rem;margin:12px 4px 6px;text-align:center;flex:1}
 .pr{margin:0 2px 8px}.pr span{display:flex;justify-content:space-between;align-items:center;padding:5px 10px;border-radius:12px;font-size:.9rem}
-.pr .m{background:var(--g);color:#fff;font-weight:800}
-.card .add{margin:0;border-radius:16px;background:var(--gold);color:#3a2800;padding:10px;width:100%}
-
-/* النوافذ المنبثقة (السلة + إضافة منتج) */
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:none;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(4px)}
-.modal.open{display:flex}
-.mbox{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:26px;max-width:480px;width:100%;max-height:90vh;overflow-y:auto;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
-.mhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px}
-.mhead h3{margin:0;font-family:'Reem Kufi',serif;font-size:1.35rem;color:var(--g)}
-.close-btn{background:var(--line);color:var(--ink);width:34px;height:34px;padding:0;border-radius:50%}
-
-/* حقول الإدخال */
-.fg{margin-bottom:12px}
-.fg label{display:block;font-weight:700;margin-bottom:4px;font-size:.9rem}
-.fg input,.fg select{width:100%;padding:10px 14px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:inherit;font-size:.95rem}
-.img-preview{width:90px;height:90px;border-radius:16px;object-fit:cover;border:2px dashed var(--g);display:none;margin-top:8px}
-
-/* بطاقات الدفع البنكي */
-.pay-methods{display:grid;gap:10px;margin:12px 0}
-.pay-opt{border:2px solid var(--line);border-radius:16px;padding:12px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s}
-.pay-opt:has(input:checked){border-color:var(--g);background:rgba(44,122,73,.08)}
-.pay-opt input{width:18px;height:18px;accent-color:var(--g)}
-.pay-info{flex:1}
-.pay-info b{display:block;font-size:1rem}
-.pay-num{display:inline-flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--line);padding:4px 10px;border-radius:10px;font-weight:800;color:var(--g);margin-top:4px;font-size:.95rem;direction:ltr}
-.copy-btn{background:var(--gold);color:#3a2800;padding:3px 10px;font-size:.78rem;border-radius:8px}
-
-.cart-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
-.total-box{background:var(--bg);padding:12px;border-radius:14px;margin:12px 0;display:flex;justify-content:space-between;font-weight:800;font-size:1.1rem}
-footer{text-align:center;padding:24px 16px;color:var(--mut);border-top:1px solid var(--line);margin-top:30px;font-size:.9rem}
-</style>
-</head>
-<body>
-
-<!-- الشريط العلوي -->
-<header>
-  <a href="#" class="logo">
-    <!-- صورة الشعار (يمكنك تغيير الرابط لصورة شعارك الخاصة) -->
-    <img src="https://unsplash.com" alt="Logo" id="logoImg">
-    <b data-i18n="brandName">معشبة مجتمع الناجحين – نواكشوط</b>
-  </a>
-
-  <!-- قائمة اختيار اللغة -->
-  <select id="langSelect" class="lang-sel" aria-label="Language" onchange="changeLanguage(this.value)">
-    <option value="ar">🇲🇷 العربية</option>
-    <option value="fr">🇫🇷 Français</option>
-    <option value="en">🇬🇧 English</option>
-  </select>
-
-  <!-- زر إضافة منتج جديد -->
-  <button class="ghost" onclick="openModal('addModal')" data-i18n="addProductBtn">+ إضافة منتج</button>
-
-  <!-- زر السلة -->
-  <button class="cartb" onclick="openModal('cartModal')">
-    🛒 <span data-i18n="cartBtn">السلة</span> (<span id="cartCount">0</span>)
-  </button>
-</header>
-
-<!-- واجهة الترحيب -->
-<div class="hero">
-  <div class="sun"></div>
-  <div class="cloud"></div>
-  <div class="cloud c2"></div>
-  <div class="hc">
-    <span class="tag" data-i18n="heroTag">🌿 منتجات طبيعية 100% في نواكشوط</span>
-    <h1 data-i18n="heroTitle">معشبة مجتمع الناجحين</h1>
-    <p data-i18n="heroDesc">أجود الأعشاب الطبيعية، العسل الحر، والزيوت العلاجية الأصيلة تصلك أينما كنت في نواكشوط.</p>
-    <a href="#products" class="btn red" data-i18n="shopNow">تصفح المنتجات</a>
-  </div>
-</div>
-
-<!-- شريط الصور المتحرك للمنتجات الموجودة -->
-<div class="marquee-wrap" title="مرر المؤشر لإيقاف الحركة">
-  <div class="marquee-track" id="marqueeTrack"></div>
-</div>
-
-<!-- قسم المنتجات -->
+.pr .m{background:var(--g);color:#fff;font-weight:800}.pr span:not(.m){color:var(--mut)}
+.pr em{font-style:normal;font-size:.78rem;opacity:.9}
+.card .add{margin:0;border-radius:16px;background:var(--gold);color:#3a2800;padding:10px}
+.vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.vg figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:10px}
+.vg video{width:100%;aspect-ratio:16/9;border-radius:16px;background:#000;display:block}
+.vg figcaption{text-align:center;font-weight:700;padding:8px 0 2px}
+.about{display:grid;gap:18px}@media(min-width:760px){.about{grid-template-columns:1fr 1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:20px}
+.vid{aspect-ratio:16/9;border-radius:16px;background:#000 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCALPBDgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDFVdxqUqB0qIEg0/JNcJ6CHCnCkAoGaVhjqWkoFIBacDTacBSAUU8cU3FFAx26nKeRUdTpA2A1NRb2E5JD5G+WoKkfpUdIaFooopDCiiigBc0optOFAh1FJRQMWlpKKBDqWm5paQC0lFFACGkpaSmFwpaSjNAC0tNpRQMWloooAWkopaACiiloAKWm05MBhmgBQGNIQVqwCoFQyMCcVTRKY2ikoqSh1KDTaBQMnJ4qImnE8UymCClpKKQhaKSigBaKSigBaKSloAKKOaKBodSrTKVetADzTc04im0AiRCaeaYlKxoGJmjNFJQBq2X+qqSXG1qjsT+5qSX7jVq9jggv3jMxm5NMJpSvJpCtZM7WhM0yn0w0DQZozSUUDHimtUiDIppU5xTsAynrTvKxTioAoByG0U2lWpI3HU+M/OtMp0f31+tCH0NBx8lVzirLfd/CotvFaMinsVmphqd1qBqhliVGRUlIaQrDMUYp2KKAsNxSjFKaSgLC0UUUDsAp1JS0CYoNNapFApJAKYkQ04UlOWkimJSik708CgBKMmlIoAoENozTiKTFADcmpV7UyrUEQYZNVGNwclHVjXGFqq9XJht4qo1DVtCou+qCJd7AVcaFQh45xVWHhxV9idpzVRsZVU7oziCCRV2x5DCqrdatWRwGpLc0qfAQ3v3hVI9au3hyapMKUh09YomaZSmD1qtRRUthawlIaU0lAETUmacwNNPFBDDNNxzS5ooKTCjbmijOKYDMGinGm0CYGmnNOprigTGkVEw5qfFMbFCGiAjBopWoqhkcaF2AqzLD5QFRwSeU4bANSyzGTsBWnu8pjrzEVFKKdxWdzQQClxQKBSABSilxRQFhwpwXIplOBOKCgHBq8J08sDHOKo96cM1UZtEuKY5mySabRRUlBRSUtIQYpaKWgYmKcBRRQAUtFLQAlLiloJoCwlLSgcU2gBaKTNF
