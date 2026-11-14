@@ -3,6 +3,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>معشبة مجتمع الناجحين – نواكشوط</title>
+<meta name="description" content="معشبة مجتمع الناجحين – منتجات DXN الأصلية للصحة والعناية، طلب وتوصيل في نواكشوط.">
+<meta name="theme-color" content="#14422b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="معشبة الناجحين">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&amp;family=Reem+Kufi:wght@600;700&amp;family=Aref+Ruqaa:wght@700&amp;display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f4f8ef;--ink:#17301f;--card:#fff;--mut:#5a6e60;--g:#2c7a49;--g2:#14422b;--gold:#f2b84b;--line:#dbe7d6;--hd:rgba(255,255,255,.86);box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -126,7 +133,7 @@ textarea{font:inherit;width:100%;padding:10px;border-radius:10px;border:1px soli
 </style>
 </head>
 <body>
-<header><a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27C5 12 14 5 27 5c0 13-7 22-20 22z" fill="#2c7a49"/><path d="M6 26C12 18 17 14 24 9" stroke="#fff" stroke-width="2" fill="none"/></svg><img id="lgimg" alt="" hidden><b>معشبة مجتمع الناجحين</b></a><select id="lang" aria-label="Langue / Language / اللغة"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select><button id="admb" class="ghost" hidden>إدارة</button><button class="cartb" id="cartb">السلة (<span id="cn">0</span>)</button></header>
+<header><a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27C5 12 14 5 27 5c0 13-7 22-20 22z" fill="#2c7a49"/><path d="M6 26C12 18 17 14 24 9" stroke="#fff" stroke-width="2" fill="none"/></svg><img id="lgimg" alt="" hidden><b>معشبة مجتمع الناجحين</b></a><select id="lang" aria-label="Langue / Language / اللغة"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select><button id="instb" class="ghost" hidden>تثبيت التطبيق</button><button id="admb" class="ghost" hidden>إدارة</button><button class="cartb" id="cartb">السلة (<span id="cn">0</span>)</button></header>
 <div class="hero" id="top"><div class="hbg"></div><div class="sun"></div><div class="cloud"></div><div class="cloud c2"></div>
 <svg class="hills" viewBox="0 0 800 320" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a3d4aa"/><stop offset="1" stop-color="#7cbf8a"/></linearGradient></defs><path d="M0 150C120 90 240 120 360 100S620 60 800 110V320H0Z" fill="url(#h1)"/><path d="M0 200C140 150 260 190 400 160S660 150 800 190V320H0Z" fill="#58a96c"/><circle cx="80" cy="188" r="4" fill="#ffc3d6"/><circle cx="170" cy="180" r="4" fill="#fff"/><circle cx="265" cy="192" r="4" fill="#ffe08a"/><circle cx="350" cy="172" r="4" fill="#ffc3d6"/><circle cx="470" cy="174" r="4" fill="#fff"/><circle cx="560" cy="182" r="4" fill="#ffe08a"/><circle cx="650" cy="174" r="4" fill="#ffc3d6"/><circle cx="735" cy="190" r="4" fill="#fff"/><path d="M0 255C160 225 300 265 450 240S680 225 800 250V320H0Z" fill="var(--bg)"/></svg>
 <canvas id="rain"></canvas><i class="pt" style="--x:8%;--d:11s;--s:-0s"></i><i class="pt" style="--x:22%;--d:14s;--s:-5s"></i><i class="pt" style="--x:37%;--d:12s;--s:-2s"></i><i class="pt" style="--x:51%;--d:15s;--s:-8s"></i><i class="pt" style="--x:66%;--d:10s;--s:-4s"></i><i class="pt" style="--x:80%;--d:13s;--s:-7s"></i><i class="pt" style="--x:92%;--d:16s;--s:-1s"></i>
@@ -340,4 +347,8 @@ tr();
 <a class="fab" id="fab" target="_blank" rel="noopener" href="https://wa.me/22248436080">اطلب عبر واتساب</a>
 <script>document.getElementById('fab').href='https://wa.me/'+wa();</script>
 <script>(function(){var c=document.getElementById('rain'),x=c.getContext('2d'),w,h,d=[],rm=matchMedia('(prefers-reduced-motion:reduce)').matches;function s(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight}s();addEventListener('resize',s);for(var i=0;i<90;i++)d.push({x:Math.random()*w,y:Math.random()*h,l:10+Math.random()*16,v:6+Math.random()*7});function f(){x.clearRect(0,0,w,h);x.strokeStyle='rgba(255,255,255,.55)';x.lineWidth=1.2;x.beginPath();d.forEach(function(p){x.moveTo(p.x,p.y);x.lineTo(p.x-2,p.y+p.l);p.y+=p.v;if(p.y>h){p.y=-20;p.x=Math.random()*w}});x.stroke();if(!rm)requestAnimationFrame(f)}f()})();</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
+(function(){var b=document.getElementById('instb'),ev;addEventListener('beforeinstallprompt',function(e){e.preventDefault();ev=e;b.hidden=false});b.addEventListener('click',function(){if(!ev)return;ev.prompt();ev.userChoice.finally(function(){ev=null;b.hidden=true})});addEventListener('appinstalled',function(){b.hidden=true})})();
+</script>
 </body></html>

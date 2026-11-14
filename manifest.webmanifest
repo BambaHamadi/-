@@ -1,0 +1,24 @@
+{
+  "id": "./",
+  "name": "معشبة مجتمع الناجحين",
+  "short_name": "معشبة الناجحين",
+  "description": "منتجات DXN الأصلية للصحة والعناية – طلب وتوصيل في نواكشوط، موريتانيا.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./?source=app",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f8ef",
+  "theme_color": "#14422b",
+  "categories": ["shopping", "health", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "تسوّق الآن", "url": "./#shop", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "واتساب", "url": "https://wa.me/22248436080", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
