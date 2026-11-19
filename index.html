@@ -399,3 +399,18 @@ tr();
 <script>document.getElementById('fab').href='https://wa.me/'+wa();</script>
 <script>(function(){var c=document.getElementById('rain'),x=c.getContext('2d'),w,h,d=[],rm=matchMedia('(prefers-reduced-motion:reduce)').matches;function s(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight}s();addEventListener('resize',s);for(var i=0;i<90;i++)d.push({x:Math.random()*w,y:Math.random()*h,l:10+Math.random()*16,v:6+Math.random()*7});function f(){x.clearRect(0,0,w,h);x.strokeStyle='rgba(255,255,255,.55)';x.lineWidth=1.2;x.beginPath();d.forEach(function(p){x.moveTo(p.x,p.y);x.lineTo(p.x-2,p.y+p.l);p.y+=p.v;if(p.y>h){p.y=-20;p.x=Math.random()*w}});x.stroke();if(!rm)requestAnimationFrame(f)}f()})();</script>
 </body></html>
+<?php
+$dir = __DIR__ . '/uploads/';
+if (!is_dir($dir)) mkdir($dir, 0755, true);
+
+$f = $_FILES['file'] ?? null;
+if (!$f || $f['error'] !== UPLOAD_ERR_OK) die('فشل الرفع');
+if ($f['size'] > 20 * 1024 * 1024) die('الحجم أكبر من 20 ميغابايت');
+
+$allowed = ['jpg','jpeg','png','webp','pdf','mp4'];
+$ext = strtolower(pathinfo($f['name'], PATHINFO_EXTENSION));
+if (!in_array($ext, $allowed)) die('نوع الملف غير مسموح');
+
+$name = bin2hex(random_bytes(8)) . '.' . $ext;
+move_uploaded_file($f['tmp_name'], $dir . $name);
+echo 'تم الرفع: <a href="uploads/' . $name . '">' . $name . '</a>';
